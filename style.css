@@ -1,0 +1,79 @@
+/*THIS IS THE FONT IMPORT DOI NOT DELETE :)*/
+@import url('https://fonts.googleapis.com/css2?family=Jersey+10&display=swap');
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --font-normal: monospace,'Open Sans', 'Helvetica Neue', sans-serif;
+    --font-heading: 'Jersey 10', 'Courier New', Courier, monospace; ;
+
+    /*colours */
+    --Main: #000143;
+    --Main-tint: #2e2f72;
+    --Main-shade: #010029;
+
+    --seconary: #d0cfe6;
+    --seconary-tint:#eef0ff ;
+    --seconary-shade:#9e9cbd ;
+
+    --light: #ffffff;
+    --dark: #000000;
+
+    /* spaceing */
+    --space-0: 0; 
+    --space-1: 0.5rem; 
+    --space-2: 1rem; 
+    --space-3: 2rem; 
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    margin-bottom: 0.5rem;
+}
+
+/*//////////////////////////////////        HEADER        //////////////////////////////////*/
+
+header{
+    list-style: none;
+    background: var(--Main);
+
+}
+
+ul li{
+    display: inline-block;
+    position: relative;
+}
+
+nav ul li a {
+    display: block;
+    padding:20px 25px ;
+    color: var(--light);
+    text-decoration: none;
+    text-align: center;
+    font-size: 24px;
+}
+
+ul li ul.dropdown Li {
+    display: block;
+}
+
+ul li ul.dropdown{
+    width: 100%;
+    background: var(--Main);
+    position: absolute;
+    z-index: 999;
+    display: none;
+}
+
+ul li a :hover{
+    background: var(--Main-tint);
+}
+
+ul li:hover ul.dropdown {
+    display: block;
+}
