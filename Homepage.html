@@ -10,7 +10,8 @@
   
   <!--link to style css-->
   <link rel="stylesheet" href="style.css">
-  
+  <!--Link to java script -->
+  <script src="script.js" defer></script>
   <!-- icons link -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
@@ -47,10 +48,12 @@
   <!-- ////////////////////////////////////////////////////////      image carosel section      ////////////////////////////////////////////////////////-->
   
   <section>
-    <div class="carosel">
-      <i class="fa-solid fa-arrow-left"></i>
-      <i class="fa-solid fa-arrow-right"></i>
-      <ul>
+    <div class="carosel" data-carosel>
+      <!--arrow keys-->
+      <i class="fa-solid fa-arrow-left" data-carosel-button="next"></i>
+      <i class="fa-solid fa-arrow-right" data-carosel-button="perv"></i>
+      <!--slides-->
+      <ul data-slides>
         <li class="slide" data-active >
           <img src="assets/place holder one.png" alt="placeholder">
         </li>
@@ -66,7 +69,8 @@
       </ul>
     </div>
   </section>
-  
+
+
   
   <!--////////////////////////////////////////////////////////      main = the main body of the page     ////////////////////////////////////////////////////////-->
   

@@ -133,7 +133,7 @@ body{
     opacity: 1;
 }
 
-.carosel > i {
+.carosel >i {
     position: absolute;
     z-index: 5;
     top: 25%;
@@ -141,15 +141,16 @@ body{
     cursor: pointer;
     font-size: 2rem;
 }
-.carosel >i:hover,
+
+.carosel > i:hover,
 .carosel > i:focus{
     color: var(--light);
 }
 
-.fa-arrow-right{
+.fa-arrow-right {
     right: 1rem;
 }
 
-.fa-arrow-left{
+.fa-arrow-left {
     left: 1rem;
 }
