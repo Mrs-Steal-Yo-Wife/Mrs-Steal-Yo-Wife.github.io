@@ -102,24 +102,24 @@ ul li:hover ul.dropdown {
 }
 
 /*//////////////////////////////////        carosel        //////////////////////////////////*/
-
 body{
-    background: var(--Main-shade);
+    background-color: var(--Main);
 }
 
 .fa-solid fa-arrow-left fa-solid fa-arrow-right {
     box-sizing: border-box;
 }
 .carosel{
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 380px;
     position: relative;
+    background: var(--Main-shade);
 }
 
 .slide >img {
     display: block;
     width: 100%;
-    height: 50%;
+    height: 100%;
     object-fit: contain;
     object-position: center
 }
@@ -136,7 +136,7 @@ body{
 .carosel >i {
     position: absolute;
     z-index: 5;
-    top: 25%;
+    top: 45%;
     color: var(--seconary-shade);
     cursor: pointer;
     font-size: 2rem;
@@ -153,4 +153,11 @@ body{
 
 .fa-arrow-left {
     left: 1rem;
+}
+
+/*//////////////////////////////////        main        //////////////////////////////////*/
+
+main{
+    background-color: var(--Main);
+
 }
