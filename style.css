@@ -9,21 +9,20 @@
 }
 
 :root {
-    --font-normal: monospace,'Open Sans', 'Helvetica Neue', sans-serif;
-    --font-heading: 'Jersey 10', 'Courier New', Courier, monospace; ;
-
+    
+    
     /*colours */
     --Main: #000143;
     --Main-tint: #2e2f72;
     --Main-shade: #010029;
-
+    
     --seconary: #d0cfe6;
     --seconary-tint:#eef0ff ;
-    --seconary-shade:#9e9cbd ;
-
+    --seconary-shade:#a7a5bb ;
+    
     --light: #ffffff;
     --dark: #000000;
-
+    
     /* spaceing */
     --space-0: 0; 
     --space-1: 0.5rem; 
@@ -38,10 +37,18 @@ h1, h2, h3, h4, h5, h6 {
 
 /*//////////////////////////////////        HEADER        //////////////////////////////////*/
 
-header{
-    list-style: none;
+.main-bar{
+    width: 100%;
+    height: 120px;
     background: var(--Main);
-
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 8%;
+}
+ul{
+    list-style: none;
+    display: flex;
 }
 
 ul li{
@@ -49,15 +56,16 @@ ul li{
     position: relative;
 }
 
-nav ul li a {
+ul li a {
     display: block;
-    padding:20px 25px ;
+    padding: 25px ;
     color: var(--light);
     text-decoration: none;
     text-align: center;
-    font-size: 24px;
+    font-size: 20px;
 }
 
+/* Drop down menu dont delete */
 ul li ul.dropdown Li {
     display: block;
 }
@@ -68,12 +76,80 @@ ul li ul.dropdown{
     position: absolute;
     z-index: 999;
     display: none;
+    justify-content: center;
 }
 
-ul li a :hover{
-    background: var(--Main-tint);
+.dropdown li :hover{
+    background-color: var(--Main-tint);
+    cursor: pointer;
 }
 
 ul li:hover ul.dropdown {
     display: block;
+}
+
+
+
+.logo{
+    float: left;
+    width : 20%;
+    display: flex;
+}
+
+.icons{
+    color: var(--light);
+    
+}
+
+/*//////////////////////////////////        carosel        //////////////////////////////////*/
+
+body{
+    background: var(--Main-shade);
+}
+
+.fa-solid fa-arrow-left fa-solid fa-arrow-right {
+    box-sizing: border-box;
+}
+.carosel{
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+
+.slide >img {
+    display: block;
+    width: 100%;
+    height: 50%;
+    object-fit: contain;
+    object-position: center
+}
+.slide{
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+}
+
+.slide[data-active] {
+    opacity: 1;
+}
+
+.carosel > i {
+    position: absolute;
+    z-index: 5;
+    top: 25%;
+    color: var(--seconary-shade);
+    cursor: pointer;
+    font-size: 2rem;
+}
+.carosel >i:hover,
+.carosel > i:focus{
+    color: var(--light);
+}
+
+.fa-arrow-right{
+    right: 1rem;
+}
+
+.fa-arrow-left{
+    left: 1rem;
 }
