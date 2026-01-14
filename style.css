@@ -23,7 +23,7 @@
     --light: #ffffff;
     --dark: #000000;
     
-    --gradient: linear-gradient(to bottom,#191944 , #000143 );
+    --gradient: linear-gradient(to bottom,#202050 , #000143 );
     --shadow:rgba(0,0,0,0.8);
     
     /* spaceing */
@@ -38,18 +38,26 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: 0.5rem;
 }
 
+body{
+    background-color: var(--seconary-tint);
+    
+}
+
+
 /*//////////////////////////////////        HEADER        //////////////////////////////////*/
 
 .main-bar{
+    display: flex;
     width: 100%;
     height: 120px;
     background-color: var(--Main);
     background: var(--gradient);
-    display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 8%;
+    padding: 0 10%;
+    border-bottom: var(--seconary-shade) solid 1px;
 }
+
 ul{
     list-style: none;
     display: flex;
@@ -62,6 +70,11 @@ ul li{
 
 ul li:hover{
     background: var(--Main-tint);
+}
+
+a{
+    padding: 15px ;
+
 }
 
 ul li a {
@@ -84,7 +97,7 @@ ul li ul.dropdown{
     position: absolute;
     z-index: 999;
     display: none;
-    justify-content: center;
+    align-items: center;
 }
 
 .dropdown li :hover{
@@ -105,8 +118,11 @@ ul li:hover ul.dropdown {
     
 }
 
-.icons{
+.icons {
     color: var(--light);
+    justify-content: space-between 5%;
+
+    cursor: pointer;
 }
 
 /*//////////////////////////////////        carosel        //////////////////////////////////*/
@@ -173,7 +189,6 @@ img{
 }
 
 /*//////////////////////////////////        main        //////////////////////////////////*/
-body{
-    background-color: var(--seconary-tint);
 
-}
+
+
