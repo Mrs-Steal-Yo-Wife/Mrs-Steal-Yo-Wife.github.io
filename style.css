@@ -1,6 +1,5 @@
 /*THIS IS THE FONT IMPORT DOI NOT DELETE :)*/
-@import url('https://fonts.googleapis.com/css2?family=Jersey+10&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Geologica:wght,CRSV@100..900,0&display=swap');
 
 * {
     box-sizing: border-box;
@@ -40,7 +39,6 @@ h1, h2, h3, h4, h5, h6 {
 
 body{
     background-color: var(--seconary-tint);
-    
 }
 
 
@@ -56,6 +54,7 @@ body{
     justify-content: space-between;
     padding: 0 10%;
     border-bottom: var(--seconary-shade) solid 1px;
+    font-family: Geologica, Georgia, 'Times New Roman', Times, serif;
 }
 
 ul{
@@ -74,7 +73,7 @@ ul li:hover{
 
 a{
     padding: 15px ;
-
+    
 }
 
 ul li a {
@@ -92,7 +91,6 @@ ul li ul.dropdown Li {
 }
 
 ul li ul.dropdown{
-    width: 100%;
     background: var(--Main);
     position: absolute;
     z-index: 999;
@@ -121,8 +119,11 @@ ul li:hover ul.dropdown {
 .icons {
     color: var(--light);
     justify-content: space-between 5%;
-
     cursor: pointer;
+}
+
+.icons i {
+    padding: 20px;
 }
 
 /*//////////////////////////////////        carosel        //////////////////////////////////*/
@@ -190,5 +191,44 @@ img{
 
 /*//////////////////////////////////        main        //////////////////////////////////*/
 
+.news-image {
+    position: relative;
+    /* This will tell the product-tag to behave */
+}
 
+.news-image img {
+    aspect-ratio: 16 / 9;
+    width: 100%;
+    object-fit: cover;
 
+    border: 4px solid var(--light);
+    border-radius: var(--space-1);
+
+    box-shadow: var(--shadow-dark);
+}
+
+.news-image .tag {
+    background-color: var(--dark);
+    color: var(--light);
+    box-shadow: var(--shadow-light);
+
+    padding: var(--space-1) var(--space-2);
+    border-radius: var(--space-3);
+
+    position: absolute;
+    top: var(--space-2);
+    left: var(--space-2);
+}
+.tags {
+    display: flex;
+    gap: var(--space-1);
+    list-style: none;
+}
+.tags .tag-item {
+    background-color: var(--primary);
+    color: var(--light);
+    text-decoration: none;
+
+    border-radius: var(--space-2);
+    padding: var(--space-1) var(--space-2);
+}
