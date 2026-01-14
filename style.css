@@ -13,15 +13,18 @@
     
     /*colours */
     --Main: #000143;
-    --Main-tint: #2e2f72;
+    --Main-tint: #1d1e50;
     --Main-shade: #010029;
     
-    --seconary: #d0cfe6;
-    --seconary-tint:#eef0ff ;
-    --seconary-shade:#a7a5bb ;
+    --seconary: #efecea;
+    --seconary-tint:#f8f4f2 ;
+    --seconary-shade:#d1cfcd ;
     
     --light: #ffffff;
     --dark: #000000;
+    
+    --gradient: linear-gradient(to bottom,#191944 , #000143 );
+    --shadow:rgba(0,0,0,0.8);
     
     /* spaceing */
     --space-0: 0; 
@@ -40,7 +43,8 @@ h1, h2, h3, h4, h5, h6 {
 .main-bar{
     width: 100%;
     height: 120px;
-    background: var(--Main);
+    background-color: var(--Main);
+    background: var(--gradient);
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -54,6 +58,10 @@ ul{
 ul li{
     display: inline-block;
     position: relative;
+}
+
+ul li:hover{
+    background: var(--Main-tint);
 }
 
 ul li a {
@@ -88,76 +96,84 @@ ul li:hover ul.dropdown {
     display: block;
 }
 
-
+/*logo and icons*/
 
 .logo{
     float: left;
     width : 20%;
     display: flex;
+    
 }
 
 .icons{
     color: var(--light);
-    
 }
 
 /*//////////////////////////////////        carosel        //////////////////////////////////*/
-body{
-    background-color: var(--Main);
-}
 
-.fa-solid fa-arrow-left fa-solid fa-arrow-right {
-    box-sizing: border-box;
-}
-.carosel{
-    width: 100%;
-    height: 380px;
-    position: relative;
-    background: var(--Main-shade);
-}
-
-.slide >img {
+img{
     display: block;
     width: 100%;
-    height: 100%;
+    height: 500px;
     object-fit: contain;
     object-position: center
 }
-.slide{
-    position: absolute;
-    inset: 0;
-    opacity: 0;
+
+.carosel{
+    background-color: var(--Main-shade);
 }
 
-.slide[data-active] {
-    opacity: 1;
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
 }
 
-.carosel >i {
-    position: absolute;
-    z-index: 5;
-    top: 45%;
-    color: var(--seconary-shade);
+.mySlides {
+    display: none;
+}
+
+/* buttons */
+.prev, .next {
     cursor: pointer;
-    font-size: 2rem;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: var(--seconary-shade);
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
 }
 
-.carosel > i:hover,
-.carosel > i:focus{
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+    background-color: var(--shadow);
     color: var(--light);
 }
 
-.fa-arrow-right {
-    right: 1rem;
+
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
 }
 
-.fa-arrow-left {
-    left: 1rem;
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
 }
 
 /*//////////////////////////////////        main        //////////////////////////////////*/
-
-main{
-    background-color: var(--Main);
+body{
+    background-color: var(--seconary-tint);
 
 }

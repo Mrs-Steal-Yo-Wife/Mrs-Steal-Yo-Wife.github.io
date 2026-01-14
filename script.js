@@ -1,18 +1,22 @@
-const buttons = document.querySelectorAll("[data-carosel-button")
+let slideIndex = 1;
+showSlides(slideIndex);
 
-buttons.array.forEach( button => {
-    button.addEventListener("click", () =>{
-        const offset = button.dataset.caroselButton === "next" ? 1 : -1
-        const slides = button
-        .closest("[data-carosel]")
-        .querySelector('[data-slides')
-        
-        const activeSlide = slides.querySelector("[data-active]")
-        let newIndex = [...slides.childern].indexOf(activeSlide) + offset
-        if (newIndex < 0) newIndex = slides.childern.lenght -1
-        if (newIndex >= slides.childern.lenght) newIndex = 0
-        
-        slides.childern[newIndex].dataset.active = true
-        delete activeSlide.dataset.active
-    })
-});
+// Next/previous controls
+function plusSlides(n) {
+    showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+    showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+    let i;
+    let slides = document.getElementsByClassName("mySlides");
+    if (n > slides.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";}
+    slides[slideIndex-1].style.display = "block";
+} 
