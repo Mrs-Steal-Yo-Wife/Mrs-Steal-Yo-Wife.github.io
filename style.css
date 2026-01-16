@@ -24,12 +24,24 @@
     
     --gradient: linear-gradient(to bottom,#202050 , #000143 );
     --shadow:rgba(0,0,0,0.8);
+    --shadow-2:rgba(0, 0, 0, 0.404);
     
     /* spaceing */
     --space-0: 0; 
     --space-1: 0.5rem; 
     --space-2: 1rem; 
     --space-3: 2rem; 
+}
+
+.grid-2col{
+    display: grid; 
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+.grid-3col{
+    display: grid; 
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -118,7 +130,7 @@ ul li:hover ul.dropdown {
 
 .icons {
     color: var(--light);
-    justify-content: space-between 5%;
+    justify-content: space-between;
     cursor: pointer;
 }
 
@@ -128,13 +140,7 @@ ul li:hover ul.dropdown {
 
 /*//////////////////////////////////        carosel        //////////////////////////////////*/
 
-img{
-    display: block;
-    width: 100%;
-    height: 500px;
-    object-fit: contain;
-    object-position: center
-}
+
 
 .carosel{
     background-color: var(--Main-shade);
@@ -148,6 +154,14 @@ img{
 
 .mySlides {
     display: none;
+}
+
+.mySlides img{
+    display: block;
+    width: 100%;
+    height: 500px;
+    object-fit: contain;
+    object-position: center
 }
 
 /* buttons */
@@ -171,10 +185,10 @@ img{
     border-radius: 3px 0 0 3px;
 }
 
-/* On hover, add a black background color with a little bit see-through */
 .prev:hover, .next:hover {
     background-color: var(--shadow);
     color: var(--light);
+    font-size: 200%;
 }
 
 
@@ -191,44 +205,124 @@ img{
 
 /*//////////////////////////////////        main        //////////////////////////////////*/
 
+
+main {
+    font-family: Geologica, Georgia, 'Times New Roman', Times, serif;
+    
+}
+
+.apply{
+    max-width: 1200px;
+    margin: auto;
+    margin-top: 100px;
+    padding: var(--space-3);
+    background-color: var(--light);
+}
+
+/************        events        *************/
+
+.events{
+    background-color: var(--light);
+    max-width: 1200px;
+    margin: auto;
+    padding: var(--space-3);
+    box-shadow: 4px 0px 20px var(--shadow-2);
+    margin-top: 400px;
+    padding: var(--space-3);
+}
+
+.campuslife img{
+    display: block;
+    width: 500px;
+    height: 500px;
+    object-fit: contain;
+}
+
+.fun-stuff{
+    margin-top: 50px;
+}
+
+
+/************        Locations        *************/
+
+.locations{
+    background-color: var(--Main);
+    margin: 250px 0 250px;
+    color: var(--light);
+}
+
+.locations img {
+    display: block;
+    width: 100%;
+    height: 500px;
+    object-fit: contain;
+}
+
+.content{
+    margin: 0 250px;
+}
+
+
+/************        news        *************/
+.news-sec{
+    background-color: var(--light);
+    max-width: 1200px;
+    margin: auto;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    padding: var(--space-3);
+    box-shadow: 4px 0px 20px var(--shadow-2);
+    
+}
 .news-image {
     position: relative;
-    /* This will tell the product-tag to behave */
+    display:flex;
+    flex-direction: column;
 }
 
 .news-image img {
-    aspect-ratio: 16 / 9;
     width: 100%;
+    aspect-ratio: 16 / 9;
     object-fit: cover;
-
-    border: 4px solid var(--light);
-    border-radius: var(--space-1);
-
-    box-shadow: var(--shadow-dark);
 }
 
 .news-image .tag {
-    background-color: var(--dark);
-    color: var(--light);
-    box-shadow: var(--shadow-light);
-
+    background-color: var(--light);
+    color: var(--Main);
+    box-shadow: 4px 0px 15px var(--shadow-2);
+    
     padding: var(--space-1) var(--space-2);
     border-radius: var(--space-3);
-
+    
     position: absolute;
     top: var(--space-2);
     left: var(--space-2);
 }
-.tags {
-    display: flex;
-    gap: var(--space-1);
-    list-style: none;
-}
-.tags .tag-item {
-    background-color: var(--primary);
-    color: var(--light);
-    text-decoration: none;
 
-    border-radius: var(--space-2);
-    padding: var(--space-1) var(--space-2);
+.news-component{
+    box-shadow: 4px 0px 2px var(--shadow-2);
+    
+}
+
+.news-component:hover{
+    width: 102%;
+    height: 102%;
+    transform: translateX(-1%) translateY(-1%);
+    cursor: pointer;
+}
+
+.descrption-box {
+    background-color: var(--Main);
+    color: var(--light);
+    padding: var(--space-1);
+    height: 100px;
+}
+
+
+/*//////////////////////////////////        footer        //////////////////////////////////*/
+
+.footer{
+    background-color: var(--Main);
+    width: 100%;
+    height: 300px;
 }
