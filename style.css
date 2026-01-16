@@ -456,6 +456,7 @@ input[type=submit]:hover {
 
 /*//////////////////////////////////        about us        //////////////////////////////////*/
 
+
 .about-us{
     background-color: var(--light);
     max-width: 1400px;
@@ -479,4 +480,119 @@ input[type=submit]:hover {
 
 .bio{
     padding: 20px 50px 20px;
+}
+/*//////////////////////////////////        instituet        //////////////////////////////////*/
+
+
+.intro{
+    text-align: center;
+    background-color: var(--light);
+    max-width: 1200px;
+    margin: auto;
+    padding: var(--space-3);
+    box-shadow: 4px 0px 20px var(--shadow-2);
+    margin-top: 50px;
+}
+
+.intro h3 {
+    color: var(--light);
+    background-color: var(--Main);
+}
+
+.fun-stuff2{
+    background-color: var(--light);
+    max-width: 1200px;
+    margin: auto;
+    padding: var(--space-3);
+    box-shadow: 4px 0px 20px var(--shadow-2);
+    margin-top: 75px;
+    margin-bottom: 75px;
+}
+
+.line{
+    width: 100%;
+    height: 20px;
+    position: absolute;
+    z-index: -1;
+    top: 25%;
+    background-color: var(--Main);
+}
+
+.shape{
+    width: 100%;
+    height: 600px;
+    position: absolute;
+    z-index: -1;
+    top: 50%;
+    background-color: var(--Main);
+}
+
+/*//////////////////////////////////        course info        //////////////////////////////////*/
+
+.Instituteinfo{
+    background-color: var(--light);
+    max-width: 1000px;
+    margin: auto;
+    padding: var(--space-3);
+    box-shadow: 4px 0px 20px var(--shadow-2);
+    margin-top: 50px;
+}
+
+.Instituteinfo img {
+    display: block;
+    width: 100%;
+    height: 400px;
+    object-fit: contain;
+}
+
+.instsiute-intro{
+    
+}
+
+.line2{
+    width: 100%;
+    height: 180px;
+    position: absolute;
+    z-index: -1;
+    top: 55%;
+    background-color: var(--Main);
+}
+
+.Courses{
+    background-color: var(--light);
+    max-width: 1700px;
+    margin: auto;
+    padding: var(--space-3);
+    box-shadow: 4px 0px 20px var(--shadow-2);
+    margin-top: 50px;
+    margin-bottom: 50px;
+    justify-content: center;
+}
+
+.table{
+    width: 1600px;
+    margin: auto;
+    border: var(--Main)solid 4px;
+}
+
+table, th, td {
+    text-align: left;
+    border: var(--Main) solid 4px;
+    border-collapse: collapse;
+}
+
+
+th, td {
+    padding: 10px;
+}
+
+th {
+    text-align: left;
+    color: var(--light);
+    background-color: var(--Main);
+}
+
+.highlight{
+    color: var(--light);
+    background-color: var(--Main);
 }
