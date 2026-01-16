@@ -15,7 +15,6 @@
 <body>
     <!--////////////////////////////////////////////////////////     headder    ////////////////////////////////////////////////////////-->
     <header>
-        
         <nav class="main-bar">
             <!--mcats logo-->
             <img class="logo" src="assets/mcast logo.jpg" alt="mcast logo">
@@ -24,13 +23,13 @@
                 <li><a href="index.html">Home</a></li>
                 
                 <li><!-- drop down menu-->
-                    <a href="#CourseInfo">Study</a>
+                    <a href="CourseInfo.html">Study</a>
                     <ul class="dropdown">
-                        <li><a href="#Institute">Institute</a> </li>
-                        <li><a href="#CourseInfo">Courses</a> </li>
+                        <li><a href="Institute.html">Institute</a> </li>
+                        <li><a href="CourseInfo.html">Courses</a> </li>
                     </ul>
                 </li> 
-                <li><a href="#AboutUs">About-us</a></li> 
+                <li><a href="AboutUs.html">About-us</a></li> 
                 <li><a href="Contact.html">Contact</a></li> 
             </ul>
             
@@ -44,10 +43,49 @@
     </header>
     
     
-    <section class="footer">
-        
-    </section>
-    
-</body>  
-</body>
-</html>
+    <main>
+        <section class="grid-2col">
+            <div class="maps">
+                <img src="assets/map.png" alt="">
+                
+                <div class="open-hours">
+                    <h3>Ask in person at any of our locations</h3>
+                    <h4>Opeing hours:</h4>
+                    <h6>Monday to Friday - 8:00 till 16:00</h6> 
+                    <h6>saturday and sunday - closed </h>
+                    </div>
+                </div>
+                
+                
+                <!--contact box-->
+                <div class="container">
+                    <form action="action_page.php">
+                        
+                        <label for="fname">First Name</label>
+                        <input type="text" id="fname" name="firstname" placeholder="Your name..">
+                        
+                        <label for="lname">Last Name</label>
+                        <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+                        
+                        <label for="country">Place</label>
+                        <select id="country" name="country">
+                            <option value="Malta">Malta</option>
+                            <option value="Gozo">Gozo</option>
+                            <option value="other">other</option>
+                        </select>
+                        
+                        <label for="subject">Subject</label>
+                        <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+                        
+                        <input type="submit" value="Submit">
+                        
+                    </form>
+                </div> 
+                
+            </section>
+            <section class="footer">
+                
+            </section>
+        </main>
+    </body>
+    </html>
